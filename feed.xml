@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-Hans">
+    <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
+    <link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh-Hans"/>
+    <updated>2020-01-09T16:53:29+08:00</updated>
+    <id>http://localhost:4000/feed.xml</id>
+    <title>NSHipster</title>
+    <subtitle>喜欢研究偏门技术，喜欢自动化编程，喜欢研究小软件提高编程效率
+    </subtitle>
+    <author>
+      <name>君赏</name>
+      <email>josercc@nshipster.com</email>
+      <uri>http://localhost:4000/authors/josercc</uri>
+    </author>
+    <entry>
+      <title type="html">Nsindexset</title>
+      <link href="http://localhost:4000/nsindexset/" rel="alternate" type="text/html" title="Nsindexset" />
+      <published>2012-07-07T00:00:00+08:00</published>
+      <updated>2012-07-07T00:00:00+08:00</updated>
+      <id>http://localhost:4000/nsindexset</id>
+      <content type="html" xml:base="http://localhost:4000/nsindexset/">
+        &lt;h1&gt;
+        &lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;nshipstercom&quot; href=&quot;#nshipstercom&quot;&gt;&lt;/a&gt;NSHipster.com&lt;/h1&gt;
+        &lt;p&gt;&lt;a href=&quot;https://nshipster.com&quot;&gt;NSHipster&lt;/a&gt; is a journal of the overlooked bits in
+        Swift, Objective-C and Cocoa.
+        Updated weekly.&lt;/p&gt;
+        &lt;p&gt;This repository hosts the source code that generates and deploys
+        &lt;a href=&quot;https://nshipster.com&quot;&gt;NSHipster.com&lt;/a&gt; and its translations.
+        For the articles themselves,
+        see &lt;a href=&quot;https://github.com/nshipster/articles&quot;&gt;this repository&lt;/a&gt;.&lt;/p&gt;
+        &lt;hr&gt;&lt;a id=&quot;get-on-with-it&quot;&gt;&lt;/a&gt;
+        &lt;h2&gt;
+        &lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;requirements&quot; href=&quot;#requirements&quot;&gt;&lt;/a&gt;Requirements&lt;/h2&gt;
+        &lt;ul&gt;
+        &lt;li&gt;Git 2.16.2+&lt;/li&gt;
+        &lt;li&gt;Ruby 2.4.3+&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;https://bundler.io&quot;&gt;Bundler&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h2&gt;
+        &lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;running-locally&quot; href=&quot;#running-locally&quot;&gt;&lt;/a&gt;Running Locally&lt;/h2&gt;
+        &lt;p&gt;First, clone the repository by opening Terminal.app
+        and running the following commands:&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Terminal&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git clone git@github.com:NSHipster/nshipster.com.git
+        &lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;nshipster.com
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;p&gt;Next, clone the articles submodules
+        with the following commands:&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Terminal&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git submodule update &lt;span class=&quot;nt&quot;&gt;--init&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--remote&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--merge&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;p&gt;NSHipster is built using
+        &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll&lt;/a&gt;,
+        a blog-aware, static site generator in Ruby.&lt;/p&gt;
+        &lt;p&gt;Download and update the project dependencies with Bundler
+        using the command:&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Terminal&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;p&gt;To run the site locally,
+        you must specify the configuration file
+        corresponding to the NSHipster website you’d like to build
+        (i.e. NSHipster.com, NSHipster.cn, etc.).
+        You can run the site locally with the following commands:&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Terminal&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve &lt;span class=&quot;nt&quot;&gt;--config&lt;/span&gt; _config/default.yml,_config/&lt;span class=&quot;nv&quot;&gt;$DOMAIN&lt;/span&gt;.yml &lt;span class=&quot;nt&quot;&gt;--trace&lt;/span&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;p&gt;Now open the server address in a web browser to see a local copy of the site
+        (by default, Jekyll serves to localhost on port 4000):&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Terminal&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; open http://localhost:4000
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;h2&gt;
+        &lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;deploying&quot; href=&quot;#deploying&quot;&gt;&lt;/a&gt;Deploying&lt;/h2&gt;
+        &lt;p&gt;NSHipster.com is hosted by &lt;a href=&quot;https://netlify.com&quot;&gt;Netlify&lt;/a&gt;.
+        The site is configured with continuous deployment
+        such that any push to the &lt;code&gt;master&lt;/code&gt; branch on this repository
+        automatically triggers a build and deploys the site, if successful.&lt;/p&gt;
+        &lt;p&gt;Users with Push access can deploy the site by running the following command:&lt;/p&gt;
+        &lt;pre class=&quot;highlight&quot; data-lang=&quot;Terminal&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git push origin master
+        &lt;/code&gt;&lt;/pre&gt;
+        &lt;p&gt;You can monitor the status of a deploy in real-time
+        &lt;a href=&quot;https://app.netlify.com/sites/nshipster/deploys/&quot;&gt;on this dashboard&lt;/a&gt;.&lt;/p&gt;
+        &lt;h2&gt;
+        &lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;contact&quot; href=&quot;#contact&quot;&gt;&lt;/a&gt;Contact&lt;/h2&gt;
+        &lt;p&gt;Follow NSHipster on Twitter
+        (&lt;a href=&quot;https://twitter.com/NSHipster&quot;&gt;@NSHipster&lt;/a&gt;)&lt;/p&gt;
+        &lt;h2&gt;
+        &lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;license&quot; href=&quot;#license&quot;&gt;&lt;/a&gt;License&lt;/h2&gt;
+        &lt;p&gt;All code is published under the
+        &lt;a href=&quot;https://opensource.org/licenses/MIT&quot;&gt;MIT License&lt;/a&gt;.&lt;/p&gt;
+        &lt;p&gt;All content is released under the
+        &lt;a href=&quot;https://creativecommons.org/licenses/by-nc/4.0/&quot;&gt;Creative Commons BY-NC License&lt;/a&gt;.&lt;/p&gt;
+        &lt;p&gt;NSHipster® and the NSHipster Logo
+        are registered trademarks of Read Evaluate Press, LLC.&lt;/p&gt;
+      </content>
+      <author>
+        <name>君赏</name>
+        <email>josercc@163.com</email>
+        <uri>http://localhost:4000/authors/josercc/</uri>
+      </author>
+      <summary type="html">&lt;h1&gt; &lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;nshipstercom&quot; href=&quot;#nshipstercom&quot;&gt;&lt;/a&gt;NSHipster.com&lt;/h1&gt;</summary>
+    </entry>
+  </feed>
